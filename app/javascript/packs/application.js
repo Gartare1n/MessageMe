@@ -11,6 +11,7 @@ import "channels";
 import '@doabit/semantic-ui-sass';
 import 'jquery'
 
+
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
 })
