@@ -1,19 +1,21 @@
-  <a href="<%= root_path %>", class="item">
-        Chatroom
-    </a>
-    <a class="item">
-      Messages
-    </a>
-    <div class="right menu">
-      <div class="ui dropdown item">
-        Account <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item">Log out</a>
-            <a href="login", class="item">Log in</a>
-            <a class="item">Sign up</a>
-          </div>
-      </div>
-    <div class="item">
-    <div class="ui primary button">Sign Up</div>
+
+  <%=link_to "Chatroom", root_path, class: "item ui large primary button borderless" %>
+
+<a class="item ui large primary button borderless">
+  Messages
+</a>
+<div class="right menu">
+  <div class="item ui large primary button borderless">
+    Account <i class="dropdown icon"></i>
+    <div class="menu">
+    
+    </div>
   </div>
-  </div>
+
+  <% if logged_in? %>
+    <%= link_to "Logout", logout_path, method: :delete, class: "item ui large primary button borderless"%>  
+  <% else %>
+    <%= link_to "Log in", login_path, class: "item ui large primary button borderless" %>
+  <% end %>
+ 
+</div>
