@@ -2,20 +2,14 @@
   <%=link_to "Chatroom", root_path, class: "item ui large primary button borderless" %>
 
 <a class="item ui large primary button borderless">
-  Messages
+  Messages(Do you really need private messages?)
 </a>
 <div class="right menu">
-  <div class="item ui large primary button borderless">
-    Account <i class="dropdown icon"></i>
-    <div class="menu">
-    
-    </div>
-  </div>
 
   <% if logged_in? %>
     <%= link_to "Logout", logout_path, method: :delete, class: "item ui large primary button borderless"%>  
   <% else %>
     <%= link_to "Log in", login_path, class: "item ui large primary button borderless" %>
   <% end %>
- 
+
 </div>
